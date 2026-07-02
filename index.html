@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mentoria MX Digital — Crie sites profissionais com custo R$0</title>
+  <meta name="description" content="O método que ensina você a criar e entregar sites completos usando inteligência artificial — sem hospedagem, sem mensalidade e sem programar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#080808; --panel:rgba(255,255,255,0.035); --panel-border:rgba(255,255,255,0.09);
+      --purple:#6D5CF5; --purple-light:#8B7CF8; --text:#F6F4FF;
+      --text-dim:rgba(246,244,255,0.68); --text-dimmer:rgba(246,244,255,0.48);
+      --serif:'Cormorant Garamond', serif; --sans:'Montserrat', sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background:var(--bg); color:var(--text); font-family:var(--sans); width:100%; overflow-x:hidden; position:relative; }
+
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(109,92,245,0.55); }
+      50% { box-shadow: 0 0 0 14px rgba(109,92,245,0); }
+    }
+    @keyframes liveDot {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+
+    /* --- Hover states (converted from the design's style-hover attributes) --- */
+    .btn-primary { transition:transform .25s ease, box-shadow .25s ease; }
+    .btn-primary:hover { transform:translateY(-2px); box-shadow:0 14px 36px rgba(109,92,245,0.5); }
+    .btn-primary-sm { transition:transform .25s ease, box-shadow .25s ease; }
+    .btn-primary-sm:hover { transform:translateY(-1px); box-shadow:0 10px 26px rgba(109,92,245,0.5); }
+    .btn-outline { transition:border-color .25s ease; }
+    .btn-outline:hover { border-color:var(--purple-light); }
+    .btn-mentoria { transition:transform .25s ease; }
+    .btn-mentoria:hover { transform:translateY(-2px); }
+    .btn-cta { transition:transform .25s ease, box-shadow .25s ease; }
+    .btn-cta:hover { transform:translateY(-2px); box-shadow:0 0 0 1px rgba(139,124,248,0.6), 0 20px 54px rgba(109,92,245,0.6); }
+    .card-3d { transition:transform .4s ease, box-shadow .4s ease; }
+    .card-3d:hover { transform:perspective(800px) rotateX(2deg) rotateY(-2deg) translateY(-6px) scale(1.02); box-shadow:0 24px 48px rgba(109,92,245,0.25); }
+    .link-hover { transition:color .2s ease; }
+    .link-hover:hover { color:var(--purple-light); }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header style="position:sticky; top:0; z-index:900; background:rgba(8,8,8,0.78); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid rgba(139,124,248,0.16);">
+    <div style="display:flex; align-items:center; justify-content:space-between; max-width:1180px; margin:0 auto; padding:14px clamp(20px,6vw,48px);">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <img src="assets/logo.png" alt="MX Digital" style="height:clamp(36px,4.5vw,44px); width:auto; border-radius:50%; box-shadow:0 0 18px rgba(139,124,248,0.35);">
+        <span style="font-family:var(--sans); font-weight:700; font-size:15px; letter-spacing:0.06em; color:var(--text);">MX <span style="color:var(--purple-light);">DIGITAL</span></span>
+      </div>
+      <a data-wa="hero" target="_blank" rel="noopener" class="btn-primary-sm" style="font-family:var(--sans); font-size:13.5px; font-weight:700; color:#0A0A0A; text-decoration:none; background:linear-gradient(135deg, var(--purple-light), var(--purple)); padding:11px 22px; border-radius:999px; letter-spacing:0.02em; white-space:nowrap; box-shadow:0 6px 20px rgba(109,92,245,0.35);">Falar no WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- 1. HERO -->
+  <section style="position:relative; padding:clamp(40px,8vw,64px) clamp(20px,6vw,48px) clamp(80px,10vw,120px); background:#080808; overflow:hidden;">
+    <div style="position:absolute; inset:0; z-index:0; background-color:#0b0912; background-image:url('assets/hero-bg.png'); background-size:cover; background-position:center; background-repeat:no-repeat;"></div>
+    <div style="position:absolute; inset:0; z-index:2; background:linear-gradient(180deg, rgba(8,8,8,0.45) 0%, rgba(8,8,8,0.68) 45%, #080808 94%);"></div>
+    <div style="position:relative; z-index:3; max-width:900px; margin:0 auto; text-align:center; display:flex; flex-direction:column; align-items:center; gap:clamp(20px,3vw,28px);">
+      <span style="font-family:var(--sans); font-size:13px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--purple-light);">Mentoria MX Digital</span>
+      <h1 style="font-family:var(--serif); font-weight:600; font-size:clamp(38px,6.8vw,76px); line-height:1.5; margin:0 0 48px; letter-spacing:-0.01em;">
+        Crie sites profissionais.<br>
+        <em style="font-style:italic; color:var(--purple-light); font-weight:500;">Custo R$0.</em>
+      </h1>
+      <p style="font-family:var(--sans); font-size:clamp(16px,2.2vw,19px); line-height:1.65; color:var(--text-dim); max-width:620px; margin:0;">
+        O método que ensina você a criar e entregar sites completos usando inteligência artificial — sem pagar hospedagem, sem mensalidade e sem escrever uma linha de código.
+      </p>
+      <div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-top:8px;">
+        <a data-wa="hero" target="_blank" rel="noopener" class="btn-primary" style="font-family:var(--sans); font-weight:700; font-size:16px; color:#0A0A0A; background:linear-gradient(135deg, var(--purple-light), var(--purple)); padding:17px 36px; border-radius:999px; text-decoration:none; box-shadow:0 10px 30px rgba(109,92,245,0.35);">Quero aprender</a>
+        <a href="#metodo" class="btn-outline" style="font-family:var(--sans); font-weight:600; font-size:16px; color:var(--text); background:transparent; border:1.5px solid rgba(255,255,255,0.24); padding:16px 34px; border-radius:999px; text-decoration:none;">Ver o método</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. DORES -->
+  <section style="padding:clamp(64px,9vw,110px) clamp(20px,6vw,48px);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="text-align:center; max-width:640px; margin:0 auto clamp(40px,5vw,64px);">
+        <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(32px,4.5vw,50px); margin:0 0 14px; line-height:1.1;">Se identifica com algo aqui?</h2>
+        <p style="color:var(--text-dim); font-size:clamp(15px,1.6vw,17px); margin:0; line-height:1.6;">Essas são as travas mais comuns de quem quer criar sites — e é exatamente o que a mentoria resolve.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:20px;">
+        <div style="background:var(--panel); border:1px solid var(--panel-border); border-radius:20px; padding:clamp(24px,3vw,32px); display:flex; flex-direction:column; gap:16px;">
+          <span style="width:48px; height:48px; border-radius:14px; background:linear-gradient(135deg, rgba(109,92,245,0.28), rgba(139,124,248,0.12)); border:1px solid rgba(139,124,248,0.35); display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:24px; font-weight:700; color:var(--purple-light);">!</span>
+          <h3 style="font-family:var(--sans); font-weight:700; font-size:17px; margin:0; color:var(--text);">Acabaram os créditos de novo</h3>
+          <p style="margin:0; color:var(--text-dim); font-size:14.5px; line-height:1.6;">Você começa a criar, o crédito acaba no meio do caminho e o site nunca sai do papel.</p>
+        </div>
+        <div style="background:var(--panel); border:1px solid var(--panel-border); border-radius:20px; padding:clamp(24px,3vw,32px); display:flex; flex-direction:column; gap:16px;">
+          <span style="width:48px; height:48px; border-radius:14px; background:linear-gradient(135deg, rgba(109,92,245,0.28), rgba(139,124,248,0.12)); border:1px solid rgba(139,124,248,0.35); display:flex; align-items:center; justify-content:center; font-family:var(--sans); font-size:16px; font-weight:800; color:var(--purple-light);">&lt;/&gt;</span>
+          <h3 style="font-family:var(--sans); font-weight:700; font-size:17px; margin:0; color:var(--text);">Não sei programar</h3>
+          <p style="margin:0; color:var(--text-dim); font-size:14.5px; line-height:1.6;">HTML, CSS, framework... parece um mundo distante e difícil demais pra começar sozinho.</p>
+        </div>
+        <div style="background:var(--panel); border:1px solid var(--panel-border); border-radius:20px; padding:clamp(24px,3vw,32px); display:flex; flex-direction:column; gap:16px;">
+          <span style="width:48px; height:48px; border-radius:14px; background:linear-gradient(135deg, rgba(109,92,245,0.28), rgba(139,124,248,0.12)); border:1px solid rgba(139,124,248,0.35); display:flex; align-items:center; justify-content:center; font-family:var(--sans); font-size:20px; font-weight:700; color:var(--purple-light);">&#8635;</span>
+          <h3 style="font-family:var(--sans); font-weight:700; font-size:17px; margin:0; color:var(--text);">Pago mensalidade de hospedagem</h3>
+          <p style="margin:0; color:var(--text-dim); font-size:14.5px; line-height:1.6;">Toda recorrência de hospedagem come sua margem — sem você nem lembrar direito por quê.</p>
+        </div>
+        <div style="background:var(--panel); border:1px solid var(--panel-border); border-radius:20px; padding:clamp(24px,3vw,32px); display:flex; flex-direction:column; gap:16px;">
+          <span style="width:48px; height:48px; border-radius:14px; background:linear-gradient(135deg, rgba(109,92,245,0.28), rgba(139,124,248,0.12)); border:1px solid rgba(139,124,248,0.35); display:flex; align-items:center; justify-content:center; font-family:var(--sans); font-size:20px; font-weight:700; color:var(--purple-light);">&#8599;</span>
+          <h3 style="font-family:var(--sans); font-weight:700; font-size:17px; margin:0; color:var(--text);">Não sei entregar pro cliente</h3>
+          <p style="margin:0; color:var(--text-dim); font-size:14.5px; line-height:1.6;">Você até cria algo, mas não sabe publicar, nem cobrar, nem apresentar como profissional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. MÉTODO -->
+  <section id="metodo" style="padding:clamp(64px,9vw,110px) clamp(20px,6vw,48px); background:radial-gradient(60% 50% at 50% 0%, rgba(109,92,245,0.14), transparent 70%), var(--bg); overflow:hidden;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <div style="text-align:center; max-width:680px; margin:0 auto clamp(56px,7vw,88px);">
+        <span style="font-family:var(--sans); font-size:13px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--purple-light);">O método</span>
+        <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(32px,4.5vw,50px); margin:14px 0 0; line-height:1.1;">Do zero ao site no ar em 4 passos</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:clamp(64px,8vw,96px);">
+
+        <!-- Passo 01 -->
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:clamp(32px,5vw,64px);">
+          <div style="flex:1 1 380px; min-width:260px; position:relative; padding-top:44px;">
+            <span style="position:absolute; top:-18px; left:-4px; font-family:var(--serif); font-size:clamp(76px,9vw,128px); font-weight:600; color:rgba(139,124,248,0.16); line-height:1; z-index:0; user-select:none;">01</span>
+            <div style="position:relative; z-index:1;">
+              <span style="font-family:var(--sans); font-size:12.5px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--purple-light);">Passo 01 · Inteligência artificial</span>
+              <h3 style="font-family:var(--serif); font-weight:600; font-size:clamp(26px,3.2vw,36px); margin:12px 0 16px; line-height:1.18;">Peça ao Claude</h3>
+              <p style="margin:0; color:var(--text-dim); font-size:15.5px; line-height:1.7; max-width:420px;">Você descreve o site que quer e a IA escreve o código completo — layout, textos e responsividade, prontos em minutos.</p>
+            </div>
+          </div>
+          <div style="flex:1 1 280px; min-width:240px; display:flex; justify-content:center;">
+            <div style="width:100%; max-width:340px; border-radius:18px; background:linear-gradient(160deg, #16141f, #0c0b12); border:1px solid rgba(139,124,248,0.25); box-shadow:0 30px 60px rgba(109,92,245,0.2); overflow:hidden;">
+              <div style="display:flex; align-items:center; gap:6px; padding:12px 16px; border-bottom:1px solid rgba(255,255,255,0.07);">
+                <span style="width:10px; height:10px; border-radius:50%; background:#FF5F57;"></span>
+                <span style="width:10px; height:10px; border-radius:50%; background:#FEBC2E;"></span>
+                <span style="width:10px; height:10px; border-radius:50%; background:#28C840;"></span>
+                <span style="margin-left:10px; font-family:var(--sans); font-size:11px; color:var(--text-dimmer);">claude.ai</span>
+              </div>
+              <div style="padding:18px; display:flex; flex-direction:column; gap:12px;">
+                <div style="align-self:flex-end; max-width:85%; background:rgba(139,124,248,0.18); border:1px solid rgba(139,124,248,0.3); border-radius:14px 14px 4px 14px; padding:10px 14px; font-family:var(--sans); font-size:12.5px; line-height:1.5; color:var(--text);">Crie um site profissional pra uma lash designer…</div>
+                <div style="display:flex; gap:10px; align-items:flex-start;">
+                  <span style="width:28px; height:28px; border-radius:8px; background:#F7F6FF; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#D97757" aria-hidden="true"><path d="M12 2.2c.3 3 1.1 4.9 2.5 6.3 1.4 1.4 3.3 2.2 6.3 2.5v2c-3 .3-4.9 1.1-6.3 2.5-1.4 1.4-2.2 3.3-2.5 6.3h-2c-.3-3-1.1-4.9-2.5-6.3-1.4-1.4-3.3-2.2-6.3-2.5v-2c3-.3 4.9-1.1 6.3-2.5C9.9 7.1 10.7 5.2 11 2.2z"/></svg>
+                  </span>
+                  <div style="flex:1; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); border-radius:4px 14px 14px 14px; padding:10px 14px; font-family:monospace; font-size:11px; line-height:1.7; color:var(--text-dim);">&lt;!DOCTYPE html&gt;<br>&lt;section class="hero"&gt;…<br><span style="color:var(--purple-light);">&#9608;</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Passo 02 -->
+        <div style="display:flex; flex-wrap:wrap-reverse; align-items:center; gap:clamp(32px,5vw,64px);">
+          <div style="flex:1 1 280px; min-width:240px; display:flex; justify-content:center;">
+            <div style="width:100%; max-width:340px; border-radius:18px; background:linear-gradient(160deg, #16141f, #0c0b12); border:1px solid rgba(139,124,248,0.25); box-shadow:0 30px 60px rgba(109,92,245,0.2); overflow:hidden;">
+              <div style="display:flex; align-items:center; gap:6px; padding:12px 16px; border-bottom:1px solid rgba(255,255,255,0.07);">
+                <span style="width:10px; height:10px; border-radius:50%; background:#FF5F57;"></span>
+                <span style="width:10px; height:10px; border-radius:50%; background:#FEBC2E;"></span>
+                <span style="width:10px; height:10px; border-radius:50%; background:#28C840;"></span>
+                <span style="margin-left:10px; font-family:var(--sans); font-size:11px; color:var(--text-dimmer);">github.com/mxdigital</span>
+              </div>
+              <div style="padding:18px; display:flex; flex-direction:column; gap:10px;">
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B7CF8" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="2.3"></circle><circle cx="6" cy="18" r="2.3"></circle><circle cx="18" cy="14" r="2.3"></circle><path d="M6 8.3 V15.7"></path><path d="M6 8.3 C6 12.5 9.5 14 15.7 14"></path></svg>
+                  <span style="font-family:var(--sans); font-weight:700; font-size:13.5px; color:var(--text);">site-lash-designer</span>
+                  <span style="margin-left:auto; font-family:var(--sans); font-size:10.5px; font-weight:700; color:var(--purple-light); border:1px solid rgba(139,124,248,0.4); border-radius:999px; padding:3px 10px;">Public</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:9px 12px; font-family:var(--sans); font-size:12px; color:var(--text-dim);"><span style="color:#28C840;">&#9679;</span> index.html <span style="margin-left:auto; color:var(--text-dimmer); font-size:11px;">agora</span></div>
+                <div style="display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:9px 12px; font-family:var(--sans); font-size:12px; color:var(--text-dim);"><span style="color:#28C840;">&#9679;</span> style.css <span style="margin-left:auto; color:var(--text-dimmer); font-size:11px;">agora</span></div>
+                <div style="display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:9px 12px; font-family:var(--sans); font-size:12px; color:var(--text-dim);"><span style="color:#28C840;">&#9679;</span> imagens/ <span style="margin-left:auto; color:var(--text-dimmer); font-size:11px;">agora</span></div>
+              </div>
+            </div>
+          </div>
+          <div style="flex:1 1 380px; min-width:260px; position:relative; padding-top:44px;">
+            <span style="position:absolute; top:-18px; right:-4px; font-family:var(--serif); font-size:clamp(76px,9vw,128px); font-weight:600; color:rgba(139,124,248,0.16); line-height:1; z-index:0; user-select:none;">02</span>
+            <div style="position:relative; z-index:1;">
+              <span style="font-family:var(--sans); font-size:12.5px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--purple-light);">Passo 02 · Armazenamento</span>
+              <h3 style="font-family:var(--serif); font-weight:600; font-size:clamp(26px,3.2vw,36px); margin:12px 0 16px; line-height:1.18;">Suba no GitHub</h3>
+              <p style="margin:0; color:var(--text-dim); font-size:15.5px; line-height:1.7; max-width:420px;">Guarda o projeto de graça, com versionamento — cada alteração fica registrada e nada se perde.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Passo 03 -->
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:clamp(32px,5vw,64px);">
+          <div style="flex:1 1 380px; min-width:260px; position:relative; padding-top:44px;">
+            <span style="position:absolute; top:-18px; left:-4px; font-family:var(--serif); font-size:clamp(76px,9vw,128px); font-weight:600; color:rgba(139,124,248,0.16); line-height:1; z-index:0; user-select:none;">03</span>
+            <div style="position:relative; z-index:1;">
+              <span style="font-family:var(--sans); font-size:12.5px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--purple-light);">Passo 03 · Publicação</span>
+              <h3 style="font-family:var(--serif); font-weight:600; font-size:clamp(26px,3.2vw,36px); margin:12px 0 16px; line-height:1.18;">Publique na Vercel</h3>
+              <p style="margin:0; color:var(--text-dim); font-size:15.5px; line-height:1.7; max-width:420px;">Um clique conecta seu repositório e o site já está no ar, com domínio e SSL grátis.</p>
+            </div>
+          </div>
+          <div style="flex:1 1 280px; min-width:240px; display:flex; justify-content:center;">
+            <div style="width:100%; max-width:340px; border-radius:18px; background:linear-gradient(160deg, #16141f, #0c0b12); border:1px solid rgba(139,124,248,0.25); box-shadow:0 30px 60px rgba(109,92,245,0.2); overflow:hidden;">
+              <div style="display:flex; align-items:center; gap:6px; padding:12px 16px; border-bottom:1px solid rgba(255,255,255,0.07);">
+                <span style="width:10px; height:10px; border-radius:50%; background:#FF5F57;"></span>
+                <span style="width:10px; height:10px; border-radius:50%; background:#FEBC2E;"></span>
+                <span style="width:10px; height:10px; border-radius:50%; background:#28C840;"></span>
+                <span style="margin-left:10px; font-family:var(--sans); font-size:11px; color:var(--text-dimmer);">vercel.com</span>
+              </div>
+              <div style="padding:20px 18px; display:flex; flex-direction:column; gap:14px; align-items:center;">
+                <span style="width:56px; height:56px; border-radius:16px; background:#fff; display:flex; align-items:center; justify-content:center;"><span style="width:0; height:0; border-left:15px solid transparent; border-right:15px solid transparent; border-bottom:26px solid #000;"></span></span>
+                <div style="width:100%; display:flex; align-items:center; gap:10px; background:rgba(40,200,64,0.08); border:1px solid rgba(40,200,64,0.35); border-radius:12px; padding:11px 14px;">
+                  <span style="width:9px; height:9px; border-radius:50%; background:#28C840; box-shadow:0 0 10px rgba(40,200,64,0.8);"></span>
+                  <span style="font-family:var(--sans); font-size:12.5px; font-weight:700; color:#7CE8A0;">Deploy concluído</span>
+                  <span style="margin-left:auto; font-family:var(--sans); font-size:11px; color:var(--text-dimmer);">Production · 12s</span>
+                </div>
+                <span style="font-family:var(--sans); font-size:12px; color:var(--text-dim);">https://<span style="color:var(--purple-light); font-weight:600;">seusite</span>.vercel.app</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Passo 04 -->
+        <div style="display:flex; flex-wrap:wrap-reverse; align-items:center; gap:clamp(32px,5vw,64px);">
+          <div style="flex:1 1 280px; min-width:240px; display:flex; justify-content:center;">
+            <div style="width:100%; max-width:340px; border-radius:18px; background:linear-gradient(160deg, #16141f, #0c0b12); border:1px solid rgba(139,124,248,0.35); box-shadow:0 30px 70px rgba(109,92,245,0.3); overflow:hidden;">
+              <div style="display:flex; align-items:center; gap:6px; padding:12px 16px; border-bottom:1px solid rgba(255,255,255,0.07);">
+                <span style="width:10px; height:10px; border-radius:50%; background:#FF5F57;"></span>
+                <span style="width:10px; height:10px; border-radius:50%; background:#FEBC2E;"></span>
+                <span style="width:10px; height:10px; border-radius:50%; background:#28C840;"></span>
+                <span style="margin-left:10px; flex:1; font-family:var(--sans); font-size:11px; color:var(--text-dimmer); background:rgba(255,255,255,0.05); border-radius:999px; padding:4px 12px;">maryfialho.vercel.app</span>
+              </div>
+              <div style="position:relative; aspect-ratio:16/10; background-color:#141220; background-image:url('assets/mary-fialho.png'); background-size:cover; background-position:top center;">
+                <span style="position:absolute; top:10px; right:10px; display:flex; align-items:center; gap:6px; background:rgba(8,8,8,0.75); backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px); border:1px solid rgba(40,200,64,0.4); border-radius:999px; padding:5px 12px; font-family:var(--sans); font-size:11px; font-weight:700; color:#7CE8A0;"><span style="width:7px; height:7px; border-radius:50%; background:#28C840; animation:liveDot 1.6s ease-in-out infinite;"></span>NO AR</span>
+              </div>
+            </div>
+          </div>
+          <div style="flex:1 1 380px; min-width:260px; position:relative; padding-top:44px;">
+            <span style="position:absolute; top:-18px; right:-4px; font-family:var(--serif); font-size:clamp(76px,9vw,128px); font-weight:600; color:rgba(139,124,248,0.16); line-height:1; z-index:0; user-select:none;">04</span>
+            <div style="position:relative; z-index:1;">
+              <span style="font-family:var(--sans); font-size:12.5px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--purple-light);">Passo 04 · Resultado</span>
+              <h3 style="font-family:var(--serif); font-weight:600; font-size:clamp(26px,3.2vw,36px); margin:12px 0 16px; line-height:1.18;">Site no ar</h3>
+              <p style="margin:0; color:var(--text-dim); font-size:15.5px; line-height:1.7; max-width:420px;">Pronto pra vender, com link próprio — sem hospedagem, sem mensalidade e sem programar.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <p style="text-align:center; margin:clamp(48px,6vw,72px) 0 0; font-family:var(--sans); font-size:13.5px; letter-spacing:0.04em; color:var(--text-dimmer);">Sem hospedagem. Sem mensalidade. Sem programar.</p>
+    </div>
+  </section>
+
+  <!-- 4. TUDO INCLUÍDO -->
+  <section style="padding:clamp(64px,9vw,110px) clamp(20px,6vw,48px);">
+    <div style="max-width:900px; margin:0 auto;">
+      <div style="text-align:center; margin-bottom:clamp(40px,5vw,56px);">
+        <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(32px,4.5vw,50px); margin:0; line-height:1.1;">Tudo o que você recebe</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:18px 28px;">
+        <div style="display:flex; align-items:center; gap:14px;"><span style="flex-shrink:0; width:26px; height:26px; border-radius:50%; background:linear-gradient(135deg, var(--purple), var(--purple-light)); display:flex; align-items:center; justify-content:center; color:#fff; font-size:13px; font-weight:800;">&#10003;</span><span style="font-size:16px; color:var(--text);">Calls ao vivo semanais</span></div>
+        <div style="display:flex; align-items:center; gap:14px;"><span style="flex-shrink:0; width:26px; height:26px; border-radius:50%; background:linear-gradient(135deg, var(--purple), var(--purple-light)); display:flex; align-items:center; justify-content:center; color:#fff; font-size:13px; font-weight:800;">&#10003;</span><span style="font-size:16px; color:var(--text);">Suporte direto no WhatsApp</span></div>
+        <div style="display:flex; align-items:center; gap:14px;"><span style="flex-shrink:0; width:26px; height:26px; border-radius:50%; background:linear-gradient(135deg, var(--purple), var(--purple-light)); display:flex; align-items:center; justify-content:center; color:#fff; font-size:13px; font-weight:800;">&#10003;</span><span style="font-size:16px; color:var(--text);">Scripts prontos de venda</span></div>
+        <div style="display:flex; align-items:center; gap:14px;"><span style="flex-shrink:0; width:26px; height:26px; border-radius:50%; background:linear-gradient(135deg, var(--purple), var(--purple-light)); display:flex; align-items:center; justify-content:center; color:#fff; font-size:13px; font-weight:800;">&#10003;</span><span style="font-size:16px; color:var(--text);">Método passo a passo</span></div>
+        <div style="display:flex; align-items:center; gap:14px;"><span style="flex-shrink:0; width:26px; height:26px; border-radius:50%; background:linear-gradient(135deg, var(--purple), var(--purple-light)); display:flex; align-items:center; justify-content:center; color:#fff; font-size:13px; font-weight:800;">&#10003;</span><span style="font-size:16px; color:var(--text);">Acesso vitalício</span></div>
+        <div style="display:flex; align-items:center; gap:14px;"><span style="flex-shrink:0; width:26px; height:26px; border-radius:50%; background:linear-gradient(135deg, var(--purple), var(--purple-light)); display:flex; align-items:center; justify-content:center; color:#fff; font-size:13px; font-weight:800;">&#10003;</span><span style="font-size:16px; color:var(--text);">Comunidade exclusiva</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. QUEM VAI TE ACOMPANHAR -->
+  <section style="padding:clamp(64px,9vw,110px) clamp(20px,6vw,48px); background:radial-gradient(70% 60% at 50% 20%, rgba(109,92,245,0.16), transparent 70%), var(--bg);">
+    <div style="max-width:640px; margin:0 auto; display:flex; flex-direction:column; align-items:center; text-align:center; gap:clamp(28px,4vw,36px);">
+      <span style="font-family:var(--sans); font-size:13px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--purple-light);">Quem vai te acompanhar</span>
+
+      <div style="position:relative; width:clamp(200px,28vw,260px); height:clamp(220px,30vw,280px); display:flex; align-items:flex-end; justify-content:center;">
+        <div style="position:absolute; inset:0; background:radial-gradient(60% 60% at 50% 40%, rgba(139,124,248,0.45), transparent 72%); filter:blur(4px);"></div>
+        <div style="position:relative; width:100%; height:100%; border:1.5px solid rgba(139,124,248,0.4); border-radius:140px 140px 16px 16px; display:flex; align-items:center; justify-content:center; padding:clamp(20px,3vw,28px); background:rgba(139,124,248,0.06); backdrop-filter:blur(2px); -webkit-backdrop-filter:blur(2px);">
+          <div style="position:relative; width:72%; aspect-ratio:1/1; border-radius:50%; overflow:hidden; box-shadow:0 0 40px rgba(139,124,248,0.5);">
+            <img src="assets/logo.png" alt="MX Digital" style="position:absolute; top:50%; left:50%; width:112%; height:112%; transform:translate(-50%,-50%); object-fit:cover;">
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="font-family:var(--serif); font-weight:600; font-size:clamp(26px,3.5vw,34px); margin:0 0 4px;">Maxwel</h3>
+        <p style="margin:0; font-family:var(--sans); font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--purple-light);">Fundador da MX Digital</p>
+      </div>
+
+      <p style="margin:0; color:var(--text-dim); font-size:clamp(15px,1.8vw,17.5px); line-height:1.7;">Sou o Maxwel, fundador da MX Digital. Construí uma agência inteira sozinho usando esse método — hoje entrego sites profissionais pra clientes reais sem gastar um real com hospedagem. Quero te ensinar a fazer o mesmo.</p>
+    </div>
+  </section>
+
+  <!-- 6. PORTFÓLIO -->
+  <section style="position:relative; padding:clamp(64px,9vw,110px) clamp(20px,6vw,48px); overflow:hidden; background:#080808;">
+    <div style="position:absolute; inset:0; z-index:0; background:url('assets/portfolio-bg.png') center / cover no-repeat;"></div>
+    <div style="position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(8,8,8,0.55) 0%, rgba(8,8,8,0.8) 60%, #080808 96%);"></div>
+    <div style="position:relative; z-index:2; max-width:1180px; margin:0 auto;">
+      <div style="text-align:center; max-width:680px; margin:0 auto clamp(40px,5vw,64px);">
+        <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(32px,4.5vw,50px); margin:0 0 14px; line-height:1.1;">Sites criados com esse método</h2>
+        <p style="margin:0; color:var(--text-dim); font-size:clamp(15px,1.6vw,17px); line-height:1.6;">Projetos reais, no ar, entregues por quem aplicou o método.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:28px;">
+
+        <div class="card-3d" style="position:relative; border-radius:20px; overflow:hidden; height:clamp(260px,26vw,320px); border:1px solid var(--panel-border); background-color:#141220; background-image:url('assets/mary-fialho.png'); background-size:cover; background-position:top center;">
+          <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.35) 55%, transparent 80%);"></div>
+          <div style="position:absolute; left:0; right:0; bottom:0; padding:20px 22px;">
+            <h4 style="margin:0 0 4px; font-family:var(--sans); font-weight:700; font-size:16.5px; color:#fff;">Mary Fialho</h4>
+            <p style="margin:0; font-family:var(--sans); font-size:13px; color:var(--purple-light);">Lash designer &amp; micropigmentação</p>
+          </div>
+        </div>
+
+        <div class="card-3d" style="position:relative; border-radius:20px; overflow:hidden; height:clamp(260px,26vw,320px); border:1px solid var(--panel-border); background-color:#141220; background-image:url('assets/rosangela.png'); background-size:cover; background-position:top center;">
+          <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.35) 55%, transparent 80%);"></div>
+          <div style="position:absolute; left:0; right:0; bottom:0; padding:20px 22px;">
+            <h4 style="margin:0 0 4px; font-family:var(--sans); font-weight:700; font-size:16.5px; color:#fff;">Rosângela Nascimento</h4>
+            <p style="margin:0; font-family:var(--sans); font-size:13px; color:var(--purple-light);">Psicóloga clínica</p>
+          </div>
+        </div>
+
+        <div class="card-3d" style="position:relative; border-radius:20px; overflow:hidden; height:clamp(260px,26vw,320px); border:1px solid var(--panel-border); background-color:#141220; background-image:url('assets/benditas.png'); background-size:cover; background-position:center;">
+          <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 40%, transparent 60%);"></div>
+          <div style="position:absolute; left:0; right:0; bottom:0; padding:20px 22px;">
+            <h4 style="margin:0 0 4px; font-family:var(--sans); font-weight:700; font-size:16.5px; color:#fff;">Benditas — Gizele Rocha</h4>
+            <p style="margin:0; font-family:var(--sans); font-size:13px; color:var(--purple-light);">Salão de beleza</p>
+          </div>
+        </div>
+
+        <div class="card-3d" style="position:relative; border-radius:20px; overflow:hidden; height:clamp(260px,26vw,320px); border:1px solid var(--panel-border); background-color:#141220; background-image:url('assets/cristiana.png'); background-size:cover; background-position:center 15%;">
+          <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.15) 45%, transparent 65%);"></div>
+          <div style="position:absolute; left:0; right:0; bottom:0; padding:20px 22px;">
+            <h4 style="margin:0 0 4px; font-family:var(--sans); font-weight:700; font-size:16.5px; color:#fff;">Cristiana Stringhi</h4>
+            <p style="margin:0; font-family:var(--sans); font-size:13px; color:var(--purple-light);">Psicoterapeuta holística</p>
+          </div>
+        </div>
+
+        <div class="card-3d" style="position:relative; border-radius:20px; overflow:hidden; height:clamp(260px,26vw,320px); border:1px solid var(--panel-border); background-color:#141220; background-image:url('assets/infosul.png'); background-size:cover; background-position:center;">
+          <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.12) 40%, transparent 60%);"></div>
+          <div style="position:absolute; left:0; right:0; bottom:0; padding:20px 22px;">
+            <h4 style="margin:0 0 4px; font-family:var(--sans); font-weight:700; font-size:16.5px; color:#fff;">Infosul Informática</h4>
+            <p style="margin:0; font-family:var(--sans); font-size:13px; color:var(--purple-light);">Loja de tecnologia &amp; assistência</p>
+          </div>
+        </div>
+
+        <div class="card-3d" style="position:relative; border-radius:20px; overflow:hidden; height:clamp(260px,26vw,320px); border:1px solid var(--panel-border); background-color:#141220; background-image:url('assets/neuro-design.png'); background-size:cover; background-position:top center;">
+          <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.35) 55%, transparent 80%);"></div>
+          <div style="position:absolute; left:0; right:0; bottom:0; padding:20px 22px;">
+            <h4 style="margin:0 0 4px; font-family:var(--sans); font-weight:700; font-size:16.5px; color:#fff;">Neuro-Design</h4>
+            <p style="margin:0; font-family:var(--sans); font-size:13px; color:var(--purple-light);">Divulgação científica &amp; design</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. PREÇO -->
+  <section style="position:relative; padding:clamp(64px,9vw,110px) clamp(20px,6vw,48px); overflow:hidden; background:#080808;">
+    <div style="position:absolute; inset:0; z-index:0; background:url('assets/preco-bg.png') center / cover no-repeat;"></div>
+    <div style="position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(8,8,8,0.6) 0%, rgba(8,8,8,0.82) 60%, #080808 96%);"></div>
+    <div style="position:relative; z-index:2; max-width:1000px; margin:0 auto;">
+      <div style="text-align:center; margin-bottom:clamp(40px,5vw,64px);">
+        <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(32px,4.5vw,50px); margin:0; line-height:1.1;">Escolha seu ponto de partida</h2>
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; gap:28px; justify-content:center; align-items:stretch;">
+
+        <div style="flex:1 1 320px; max-width:380px; background:var(--panel); border:1px solid var(--panel-border); border-radius:24px; padding:clamp(28px,3.5vw,36px); display:flex; flex-direction:column; gap:20px;">
+          <div>
+            <span style="font-family:var(--sans); font-size:12.5px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-dimmer);">Entrada</span>
+            <h3 style="font-family:var(--serif); font-weight:600; font-size:26px; margin:8px 0 0;">Ebook<br>Sites com Custo Zero</h3>
+          </div>
+          <div style="display:flex; align-items:baseline; gap:6px;">
+            <span style="font-family:var(--serif); font-size:44px; font-weight:600;">R$37</span>
+            <span style="color:var(--text-dimmer); font-size:14px;">pagamento único</span>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:12px; flex:1;">
+            <div style="display:flex; align-items:center; gap:10px;"><span style="color:var(--purple-light); font-weight:800;">&#10003;</span><span style="font-size:14.5px; color:var(--text-dim);">E-book completo passo a passo</span></div>
+            <div style="display:flex; align-items:center; gap:10px;"><span style="color:var(--purple-light); font-weight:800;">&#10003;</span><span style="font-size:14.5px; color:var(--text-dim);">Prompts prontos pro Claude</span></div>
+            <div style="display:flex; align-items:center; gap:10px;"><span style="color:var(--purple-light); font-weight:800;">&#10003;</span><span style="font-size:14.5px; color:var(--text-dim);">Tutorial GitHub + Vercel</span></div>
+            <div style="display:flex; align-items:center; gap:10px;"><span style="color:var(--purple-light); font-weight:800;">&#10003;</span><span style="font-size:14.5px; color:var(--text-dim);">Acesso imediato</span></div>
+          </div>
+          <a data-wa="ebook" target="_blank" rel="noopener" class="btn-outline" style="text-align:center; font-family:var(--sans); font-weight:700; font-size:15px; color:var(--text); background:transparent; border:1.5px solid rgba(255,255,255,0.24); padding:15px; border-radius:999px; text-decoration:none;">Quero o Ebook</a>
+        </div>
+
+        <div style="flex:1 1 340px; max-width:400px; background:linear-gradient(180deg, rgba(109,92,245,0.14), rgba(109,92,245,0.03)); border:1.5px solid var(--purple-light); border-radius:24px; padding:clamp(28px,3.5vw,36px); display:flex; flex-direction:column; gap:20px; position:relative; box-shadow:0 24px 60px rgba(109,92,245,0.25);">
+          <span style="position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg, var(--purple-light), var(--purple)); color:#0A0A0A; font-family:var(--sans); font-size:12px; font-weight:800; letter-spacing:0.04em; padding:6px 18px; border-radius:999px; white-space:nowrap;">MAIS POPULAR</span>
+          <div>
+            <span style="font-family:var(--sans); font-size:12.5px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--purple-light);">Completa</span>
+            <h3 style="font-family:var(--serif); font-weight:600; font-size:26px; margin:8px 0 0;">Mentoria MX Digital</h3>
+          </div>
+          <div style="display:flex; align-items:baseline; gap:6px;">
+            <span style="font-family:var(--serif); font-size:48px; font-weight:600;">R$297</span>
+            <span style="color:var(--text-dimmer); font-size:14px;">pagamento único</span>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:12px; flex:1;">
+            <div style="display:flex; align-items:center; gap:10px;"><span style="color:var(--purple-light); font-weight:800;">&#10003;</span><span style="font-size:14.5px; color:var(--text);">Tudo do Ebook</span></div>
+            <div style="display:flex; align-items:center; gap:10px;"><span style="color:var(--purple-light); font-weight:800;">&#10003;</span><span style="font-size:14.5px; color:var(--text);">Calls ao vivo semanais</span></div>
+            <div style="display:flex; align-items:center; gap:10px;"><span style="color:var(--purple-light); font-weight:800;">&#10003;</span><span style="font-size:14.5px; color:var(--text);">Suporte direto no WhatsApp</span></div>
+            <div style="display:flex; align-items:center; gap:10px;"><span style="color:var(--purple-light); font-weight:800;">&#10003;</span><span style="font-size:14.5px; color:var(--text);">Scripts prontos de venda</span></div>
+            <div style="display:flex; align-items:center; gap:10px;"><span style="color:var(--purple-light); font-weight:800;">&#10003;</span><span style="font-size:14.5px; color:var(--text);">Acesso vitalício + comunidade</span></div>
+          </div>
+          <a data-wa="mentoria" target="_blank" rel="noopener" class="btn-mentoria" style="text-align:center; font-family:var(--sans); font-weight:700; font-size:15px; color:#0A0A0A; background:linear-gradient(135deg, var(--purple-light), var(--purple)); padding:16px; border-radius:999px; text-decoration:none; box-shadow:0 10px 30px rgba(109,92,245,0.35);">Quero a Mentoria</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. GARANTIA -->
+  <section style="padding:clamp(56px,7vw,88px) clamp(20px,6vw,48px); background:var(--bg);">
+    <div style="max-width:640px; margin:0 auto; text-align:center; display:flex; flex-direction:column; align-items:center; gap:20px;">
+      <span style="width:56px; height:64px; background:var(--purple); clip-path:polygon(50% 0%, 100% 20%, 100% 55%, 50% 100%, 0% 55%, 0% 20%); display:flex; align-items:center; justify-content:center;">
+        <span style="color:#fff; font-size:22px; font-weight:800;">&#10003;</span>
+      </span>
+      <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(26px,3.6vw,36px); margin:0 0 8px; line-height:1.5;">Risco zero pra você</h2>
+      <p style="margin:0; color:var(--text-dim); font-size:16px; line-height:1.7;">Se em <strong style="color:var(--text);" data-guarantee>7 dias</strong> você sentir que não é pra você, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+    </div>
+  </section>
+
+  <!-- 9. CTA FINAL + RODAPÉ -->
+  <section style="position:relative; padding:clamp(72px,9vw,120px) clamp(20px,6vw,48px) clamp(48px,6vw,64px); text-align:center; overflow:hidden; background:#080808;">
+    <div style="position:absolute; inset:0; z-index:0; background-color:#0b0912; background:url('assets/cta-bg.png') center / cover no-repeat;"></div>
+    <div style="position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(8,8,8,0.55) 0%, rgba(8,8,8,0.8) 55%, #080808 95%), radial-gradient(90% 70% at 50% 100%, rgba(139,124,248,0.22), transparent 65%);"></div>
+    <div style="position:relative; z-index:2;">
+      <div style="max-width:720px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:26px;">
+        <span style="font-family:var(--sans); font-size:12.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--purple-light);">Próxima turma aberta</span>
+        <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(34px,5vw,58px); line-height:1.25; margin:0;">Seu primeiro site no ar pode sair <em style="font-style:italic; color:var(--purple-light); font-weight:500;">ainda essa semana.</em></h2>
+        <p style="margin:0; color:var(--text-dim); font-size:clamp(15px,1.8vw,18px); line-height:1.6; max-width:540px;">Fale agora comigo no WhatsApp e entre pra próxima turma da Mentoria MX Digital.</p>
+        <a data-wa="final" target="_blank" rel="noopener" class="btn-cta" style="font-family:var(--sans); font-weight:700; font-size:17px; color:#0A0A0A; background:linear-gradient(135deg, var(--purple-light), var(--purple)); padding:19px 48px; border-radius:999px; text-decoration:none; box-shadow:0 0 0 1px rgba(139,124,248,0.4), 0 16px 44px rgba(109,92,245,0.45); margin-top:6px;">Quero aprender agora</a>
+        <div style="display:flex; flex-wrap:wrap; gap:10px 28px; justify-content:center; margin-top:4px;">
+          <span style="display:flex; align-items:center; gap:8px; font-family:var(--sans); font-size:13px; color:var(--text-dim);"><span style="color:var(--purple-light); font-weight:800;">&#10003;</span>Garantia de <span data-guarantee>7 dias</span></span>
+          <span style="display:flex; align-items:center; gap:8px; font-family:var(--sans); font-size:13px; color:var(--text-dim);"><span style="color:var(--purple-light); font-weight:800;">&#10003;</span>Acesso vitalício</span>
+          <span style="display:flex; align-items:center; gap:8px; font-family:var(--sans); font-size:13px; color:var(--text-dim);"><span style="color:var(--purple-light); font-weight:800;">&#10003;</span>Suporte no WhatsApp</span>
+        </div>
+      </div>
+
+      <footer style="max-width:1180px; margin:clamp(72px,9vw,110px) auto 0; padding-top:32px; border-top:1px solid rgba(255,255,255,0.08); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px; text-align:left;">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <img src="assets/logo.png" alt="MX Digital" style="height:36px; width:auto; border-radius:50%;">
+          <span style="font-family:var(--sans); font-weight:700; font-size:14px; color:var(--text-dim);">MX Digital</span>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:24px; font-family:var(--sans); font-size:14px;">
+          <a href="https://instagram.com/mxdigital.ia" target="_blank" rel="noopener" class="link-hover" style="color:var(--text-dim); text-decoration:none;">@mxdigital.ia</a>
+          <a data-wa="final" target="_blank" rel="noopener" class="link-hover" style="color:var(--text-dim); text-decoration:none;">WhatsApp</a>
+        </div>
+        <span style="font-family:var(--sans); font-size:12.5px; color:var(--text-dimmer);">© 2026 MX Digital. Todos os direitos reservados.</span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- FLOATING WHATSAPP -->
+  <a data-wa="floating" target="_blank" rel="noopener" aria-label="Falar no WhatsApp" style="position:fixed; bottom:24px; right:24px; width:60px; height:60px; border-radius:50%; background:linear-gradient(135deg, var(--purple-light), var(--purple)); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 24px rgba(109,92,245,0.5); z-index:1000; animation:pulseGlow 2.6s ease-out infinite; text-decoration:none;">
+    <svg width="30" height="30" viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 29l8.2-1.6c1.7.9 3.6 1.4 5.6 1.4h.2c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9.9.9-4.7-.3-.4c-1-1.6-1.5-3.4-1.5-5.3C4.7 9.9 9.3 5.4 16 5.4c3 0 5.7 1.2 7.8 3.3 2.1 2.1 3.2 4.8 3.2 7.7 0 6.1-4.6 10.6-11 10.6zm5.6-7.9c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.2-3.6-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 2 .8 2.7.9 3.7.8.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+  </a>
+
+  <script>
+    // Configuração — edite estes valores conforme necessário.
+    // Espelha a lógica do componente original (DCLogic) do Claude Design.
+    const CONFIG = {
+      whatsappNumber: '5551999999999',   // TODO: número real da MX Digital (com DDI+DDD, só dígitos)
+      guaranteeDays: '7 dias',           // '7 dias' ou '14 dias'
+      ebookCheckoutUrl: '',              // opcional: link de checkout do Ebook (vazio = cai no WhatsApp)
+      mentoriaCheckoutUrl: ''            // opcional: link de checkout da Mentoria (vazio = cai no WhatsApp)
+    };
+
+    (function () {
+      const digits = String(CONFIG.whatsappNumber || '5551999999999').replace(/\D/g, '');
+      const wa = (msg) => `https://wa.me/${digits}?text=${encodeURIComponent(msg)}`;
+
+      const links = {
+        hero: wa('Olá! Quero aprender a criar sites profissionais com a Mentoria MX Digital.'),
+        final: wa('Olá! Vi a página da Mentoria MX Digital e quero garantir minha vaga agora.'),
+        floating: wa('Olá! Tenho uma dúvida sobre a Mentoria MX Digital.'),
+        ebook: (CONFIG.ebookCheckoutUrl || '').trim() || wa('Olá! Quero comprar o Ebook Sites com Custo Zero (R$37).'),
+        mentoria: (CONFIG.mentoriaCheckoutUrl || '').trim() || wa('Olá! Quero entrar na Mentoria MX Digital completa (R$297).')
+      };
+
+      document.querySelectorAll('[data-wa]').forEach((el) => {
+        const key = el.getAttribute('data-wa');
+        if (links[key]) el.setAttribute('href', links[key]);
+      });
+
+      document.querySelectorAll('[data-guarantee]').forEach((el) => {
+        el.textContent = CONFIG.guaranteeDays || '7 dias';
+      });
+    })();
+  </script>
+
+</body>
+</html>
