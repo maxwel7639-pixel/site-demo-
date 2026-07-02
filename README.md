@@ -22,24 +22,22 @@ python -m http.server 8000
 | `ebookCheckoutUrl` | Link de checkout do Ebook. Vazio = botão cai no WhatsApp. |
 | `mentoriaCheckoutUrl` | Link de checkout da Mentoria. Vazio = botão cai no WhatsApp. |
 
-## ⚠️ Imagens pendentes (6)
+## ⚠️ Imagens pendentes (2)
 
-O importador do Claude Design tem limite de 256 KiB por arquivo, então 6 imagens
-maiores não puderam ser baixadas e vieram truncadas — elas foram removidas. Enquanto
-não forem adicionadas, esses blocos aparecem com um fundo escuro elegante (sem quebrar
-o layout — são todos `background-image`, sem ícone de imagem quebrada).
+O importador do Claude Design tem limite de 256 KiB por arquivo. As imagens maiores
+vieram truncadas, mas 4 delas foram recuperadas dos screenshots originais no disco
+(`hero-bg`, `benditas`, `cristiana`, `infosul`).
 
-Coloque os arquivos originais em `assets/` com **exatamente estes nomes**:
+Faltam **2**, que só existiam dentro do projeto de design com nome próprio. Enquanto
+não forem adicionadas, esses 2 cards aparecem com um fundo escuro elegante (sem quebrar
+o layout — são `background-image`, sem ícone de imagem quebrada):
 
-- `assets/hero-bg.png` — fundo da seção Hero
-- `assets/mary-fialho.png` — card do portfólio + mockup do Passo 04
-- `assets/benditas.png` — card do portfólio
-- `assets/cristiana.png` — card do portfólio
-- `assets/infosul.png` — card do portfólio
+- `assets/mary-fialho.png` — card do portfólio + mockup do Passo 04 (Site no ar)
 - `assets/neuro-design.png` — card do portfólio
 
-Já incluídas e funcionando: `logo.png`, `portfolio-bg.png`, `preco-bg.png`,
-`cta-bg.png`, `rosangela.png`.
+Já incluídas e funcionando (11): `logo.png`, `hero-bg.png`, `portfolio-bg.png`,
+`preco-bg.png`, `cta-bg.png`, `rosangela.png`, `benditas.png`, `cristiana.png`,
+`infosul.png` (+ ícone do Claude em SVG inline).
 
 ## Deploy na Vercel
 
